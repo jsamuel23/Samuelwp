@@ -33,6 +33,7 @@ class Kit extends PageBase {
 
 		$properties['has_elements'] = false;
 		$properties['show_in_finder'] = false;
+		$properties['show_on_admin_bar'] = false;
 		$properties['edit_capability'] = 'edit_theme_options';
 		$properties['support_kit'] = true;
 
@@ -100,6 +101,7 @@ class Kit extends PageBase {
 			[
 				'label' => __( 'Color', 'elementor' ),
 				'type' => Controls_Manager::COLOR,
+				'dynamic' => [],
 				'selectors' => [
 					$selector => 'color: {{VALUE}};',
 				],
@@ -154,6 +156,12 @@ class Kit extends PageBase {
 				'fields_options' => [
 					'background' => [
 						'frontend_available' => true,
+					],
+					'color' => [
+						'dynamic' => [],
+					],
+					'color_b' => [
+						'dynamic' => [],
 					],
 				],
 			]
@@ -226,6 +234,7 @@ class Kit extends PageBase {
 			[
 				'label' => __( 'Text Color', 'elementor' ),
 				'type' => Controls_Manager::COLOR,
+				'dynamic' => [],
 				'selectors' => [
 					$button_selector => 'color: {{VALUE}};',
 				],
@@ -237,6 +246,7 @@ class Kit extends PageBase {
 			[
 				'label' => __( 'Background Color', 'elementor' ),
 				'type' => Controls_Manager::COLOR,
+				'dynamic' => [],
 				'selectors' => [
 					$button_selector => 'background-color: {{VALUE}};',
 				],
@@ -256,6 +266,11 @@ class Kit extends PageBase {
 			[
 				'name' => 'button_border',
 				'selector' => $button_selector,
+				'fields_options' => [
+					'color' => [
+						'dynamic' => [],
+					],
+				],
 			]
 		);
 
@@ -285,6 +300,7 @@ class Kit extends PageBase {
 			[
 				'label' => __( 'Text Color', 'elementor' ),
 				'type' => Controls_Manager::COLOR,
+				'dynamic' => [],
 				'selectors' => [
 					$button_hover_selector => 'color: {{VALUE}};',
 				],
@@ -296,6 +312,7 @@ class Kit extends PageBase {
 			[
 				'label' => __( 'Background Color', 'elementor' ),
 				'type' => Controls_Manager::COLOR,
+				'dynamic' => [],
 				'selectors' => [
 					$button_hover_selector => 'background-color: {{VALUE}};',
 				],
@@ -315,6 +332,11 @@ class Kit extends PageBase {
 			[
 				'name' => 'button_hover_border',
 				'selector' => $button_hover_selector,
+				'fields_options' => [
+					'color' => [
+						'dynamic' => [],
+					],
+				],
 			]
 		);
 
@@ -374,6 +396,7 @@ class Kit extends PageBase {
 			[
 				'label' => __( 'Text Color', 'elementor' ),
 				'type' => Controls_Manager::COLOR,
+				'dynamic' => [],
 				'selectors' => [
 					'{{WRAPPER}}' => 'color: {{VALUE}};',
 				],
@@ -450,6 +473,7 @@ class Kit extends PageBase {
 			[
 				'label' => __( 'Color', 'elementor' ),
 				'type' => Controls_Manager::COLOR,
+				'dynamic' => [],
 				'selectors' => [
 					$link_selectors => 'color: {{VALUE}};',
 				],
@@ -479,6 +503,7 @@ class Kit extends PageBase {
 			[
 				'label' => __( 'Color', 'elementor' ),
 				'type' => Controls_Manager::COLOR,
+				'dynamic' => [],
 				'selectors' => [
 					$link_hover_selectors => 'color: {{VALUE}};',
 				],
@@ -554,6 +579,7 @@ class Kit extends PageBase {
 			[
 				'label' => __( 'Color', 'elementor' ),
 				'type' => Controls_Manager::COLOR,
+				'dynamic' => [],
 				'selectors' => [
 					$label_selector => 'color: {{VALUE}};',
 				],
@@ -684,6 +710,11 @@ class Kit extends PageBase {
 			[
 				'name' => 'image_border',
 				'selector' => $image_selectors,
+				'fields_options' => [
+					'color' => [
+						'dynamic' => [],
+					],
+				],
 			]
 		);
 
@@ -750,6 +781,11 @@ class Kit extends PageBase {
 			[
 				'name' => 'image_hover_border',
 				'selector' => '{{WRAPPER}} img:hover',
+				'fields_options' => [
+					'color' => [
+						'dynamic' => [],
+					],
+				],
 			]
 		);
 
@@ -832,6 +868,7 @@ class Kit extends PageBase {
 			[
 				'label' => __( 'Text Color', 'elementor' ),
 				'type' => Controls_Manager::COLOR,
+				'dynamic' => [],
 				'selectors' => [
 					$selector => 'color: {{VALUE}};',
 				],
@@ -843,6 +880,7 @@ class Kit extends PageBase {
 			[
 				'label' => __( 'Background Color', 'elementor' ),
 				'type' => Controls_Manager::COLOR,
+				'dynamic' => [],
 				'selectors' => [
 					$selector => 'background-color: {{VALUE}};',
 				],
@@ -862,6 +900,11 @@ class Kit extends PageBase {
 			[
 				'name' => $prefix . '_border',
 				'selector' => $selector,
+				'fields_options' => [
+					'color' => [
+						'dynamic' => [],
+					],
+				],
 			]
 		);
 

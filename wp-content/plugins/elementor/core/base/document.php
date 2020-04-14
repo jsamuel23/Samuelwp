@@ -75,6 +75,7 @@ abstract class Document extends Controls_Stack {
 			'is_editable' => true,
 			'edit_capability' => '',
 			'show_in_finder' => true,
+			'show_on_admin_bar' => true,
 			'support_kit' => false,
 		];
 	}
@@ -255,7 +256,7 @@ abstract class Document extends Controls_Stack {
 			$attributes['class'] .= ' elementor-bc-flex-widget';
 		}
 
-		if ( Plugin::$instance->preview->is_preview_mode() ) {
+		if ( Plugin::$instance->preview->is_preview() ) {
 			$attributes['data-elementor-title'] = static::get_title();
 		} else {
 			$attributes['data-elementor-settings'] = wp_json_encode( $this->get_frontend_settings() );
